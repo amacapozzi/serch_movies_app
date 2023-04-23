@@ -8,6 +8,7 @@ export function useMovies({ query }) {
     setLoading(true);
     const handleGetMovies = async () => {
       try {
+        if(query === '') return;
         const res = await window.fetch(
           `https://www.omdbapi.com/?apikey=36a28636&s=${query}`
         );

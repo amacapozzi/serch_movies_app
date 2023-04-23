@@ -5,10 +5,10 @@ export default function Movies({ updateSearch }) {
   const { movies, loading } = useMovies({ query: updateSearch });
 
   return (
-    <ul>
+    <ul className="movies">
       {loading && <p className="text-loading">Buscando...</p>}
       {movies?.map((movie) => (
-        <li key={movie.imdbID}>
+        <li className="movie" key={movie.imdbID}>
           <h3>{movie.Title}</h3>
           <p>{movie.Year}</p>
           <img src={movie.Poster} alt={movie.Title} />

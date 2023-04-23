@@ -38,7 +38,7 @@ function App() {
   const handleSubmit = () => {};
 
   return (
-    <div>
+    <div className="page">
       <header>
         <h1>Buscador de peliculas</h1>
         <form>
